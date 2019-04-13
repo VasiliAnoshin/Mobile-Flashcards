@@ -8,3 +8,9 @@ App was tested in Android. Some parts of the code include ios preparation for th
 - Clone this project.
 - Inside of terminal project execute : ``npm install``\ ``yarn install``  to install all dependencies
 - Execute ``yarn start`` \   ``npm start``
+
+## Technology
+- React 
+- React-Native
+- Redux
+- [expo](https://docs.expo.io/versions/v31.0.0/)
