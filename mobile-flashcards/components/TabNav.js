@@ -46,15 +46,9 @@ const navigationOptions = {
   },
 };
 
-console.log('after route')
-console.log(router)
-
 const TabNav =
   Platform.OS === 'ios'
     ? createBottomTabNavigator(router, navigationOptions)
     : createMaterialTopTabNavigator(router, navigationOptions);
- 
- console.log(TabNav)
- console.log('After TabNav')
 
 export default createAppContainer(TabNav);
