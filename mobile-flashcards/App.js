@@ -4,6 +4,7 @@ import TabNav from './components/TabNav';
 import { purple, white } from './utils/colors'
 import { Constants } from 'expo'
 import { createStackNavigator,createAppContainer  } from 'react-navigation'
+import { createStore } from 'redux'
 
 // const MainNavigator = createAppContainer(createStackNavigator({
 //     home: {
@@ -13,6 +14,8 @@ import { createStackNavigator,createAppContainer  } from 'react-navigation'
 //       },
 //     },
 //   }));
+
+const store = createStore(reducer, middleware);
 
 function ManualStatusBar ({backgroundColor, ...props}) {
     return (
@@ -25,11 +28,13 @@ function ManualStatusBar ({backgroundColor, ...props}) {
 export default class App extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1}}>
-       <ManualStatusBar backgroundColor={purple} barStyle="light-content" />
-        {/* <MainNavigator /> */}
-        <TabNav />
-      </View>
+       <Provider store={store}>
+          <View style={{ flex: 1}}>
+          <ManualStatusBar backgroundColor={purple} barStyle="light-content" />
+            {/* <MainNavigator /> */}
+            <TabNav />
+          </View>
+        </Provider>
     );
   }
 }
