@@ -5,6 +5,10 @@ import { purple, white } from './utils/colors'
 import { Constants } from 'expo'
 import { createStackNavigator,createAppContainer  } from 'react-navigation'
 import { createStore } from 'redux'
+import reducer from './reducers'
+import middleware from './middleware'
+import {Provider} from 'react-redux'
+
 
 // const MainNavigator = createAppContainer(createStackNavigator({
 //     home: {
