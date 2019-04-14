@@ -29,11 +29,14 @@ export const FakeData = {
 
 function setStorageData()
 {
-    AsyncStorage.setItem(DECKS_STORAGE_KEY, JSON.stringify(Data));
-    return FakeData;
+  console.log('inside setStorageData')
+  console.log(FakeData)
+  AsyncStorage.setItem(DECKS_STORAGE_KEY, JSON.stringify(FakeData));
+  return FakeData;
 }
 
 export function getDecks(){
+  console.log('inside getDecks')
     return AsyncStorage.getItem(DECKS_STORAGE_KEY)
             .then(res => 
                 res === null
