@@ -14,12 +14,6 @@ class Decks extends Component {
   }
 }
 
-// const mapStateToProps = ({decks}) =>{
-//   console.log('inside maptoprops')
-//   return {
-//     decks
-//   };
-// }
 const mapStateToProps = (decks) =>{
   console.log('inside maptoprops')
   return {
@@ -27,5 +21,4 @@ const mapStateToProps = (decks) =>{
   };
 }
 
-//export default connect(mapStateToProps)(Decks)
-export default Decks
+export default connect(mapStateToProps)(Decks)
