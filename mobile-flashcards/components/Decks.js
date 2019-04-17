@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
 import { View, TouchableOpacity, Text, StyleSheet, Platform } from 'react-native'
 import { connect } from 'react-redux'
+import {handleInitialeDecks} from '../actions/shared'
 
 class Decks extends Component {
+    
+    componentDidMount(){
+      // console.log(this.props)
+      this.props.dispatch(handleInitialeDecks())
+      // console.log('after props dispatch')
+      // console.log(this.props.decks.length)
+    }
+    
     render() {
     console.log('inside Decks')
-    console.log(this.props.decks)
     return (
       <View>
         <Text>This is Decks !!!!</Text>
@@ -14,10 +22,11 @@ class Decks extends Component {
   }
 }
 
-const mapStateToProps = (decks) =>{
+const mapStateToProps = (state ) =>{
   console.log('inside maptoprops')
+  console.log(state)
   return {
-      decks
+      decks: state.decks
   };
 }
 

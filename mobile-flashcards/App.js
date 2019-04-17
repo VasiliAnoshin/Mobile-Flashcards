@@ -8,6 +8,8 @@ import { createStore } from 'redux'
 import reducer from './reducers'
 import middleware from './middleware'
 import {Provider} from 'react-redux'
+import {handleInitialeDecks} from './actions/shared'
+
 
 
 // const MainNavigator = createAppContainer(createStackNavigator({
@@ -30,6 +32,11 @@ function ManualStatusBar ({backgroundColor, ...props}) {
 }
 
 export default class App extends React.Component {
+
+  componentdidmount(){
+     this.props.dispatch(handleInitialeDecks())
+  }
+
   render() {
     return (
        <Provider store={store}>
@@ -42,4 +49,3 @@ export default class App extends React.Component {
     );
   }
 }
-
