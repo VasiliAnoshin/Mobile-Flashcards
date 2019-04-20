@@ -14,3 +14,5 @@ App was tested in Android. Some parts of the code include ios preparation for th
 - React-Native
 - Redux
 - [expo](https://docs.expo.io/versions/v31.0.0/)
+
+The set up for the Android simulator can be quite complicated. Moreover, Expo can be unreliable at times. Try using an <a target="_blank" href="https://snack.expo.io">Expo Snack</a>🍎 to build the class project and the course project if you're having trouble setting up your local environment.
