@@ -1,3 +1,6 @@
+## UNFINISHED PROJECT 
+I decided suspended this project and return to it in the future
+
 # Study Deck
 Small Android App that allows creating your own deck with flashcards, add some cards inside and challenge yourself.
 This aplication was builded with React-Native, using Redux to mantin the data in sync with a local storage.
